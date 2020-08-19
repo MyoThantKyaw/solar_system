@@ -200,8 +200,12 @@ p {
     padding: 6px;
     height: 120px;
     display: none;
-    color: #c8c5dd;
+    color: #87a5ef;
     overflow: auto;
+}
+
+#info-panel-bottom>div>p {
+    text-indent: 50px;
 }
 
 #info-panel-top>div>table>tbody>tr>td:nth-child(even) {
