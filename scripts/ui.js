@@ -32,7 +32,7 @@ $('#planets-dropdown').dropdown({
         if (index == -1) {
             if (!$(infoPanelTop).is(":hidden")) {
                 $(infoPanelTop).slideToggle(600);
-                // $(infoPanelBottom).slideToggle(600);
+                $(infoPanelBottom).slideToggle(600);
             }
             isSinglePlanetSelected = false;
         } else {
@@ -42,15 +42,15 @@ $('#planets-dropdown').dropdown({
                     changeInfoContent(index);
                     $(infoPanelTop).slideToggle(600);
                 });
-                // $(infoPanelBottom).slideToggle(600, function() {
-                //     // change content.... and show
-                //     // $(infoPanelBottom).slideToggle(600);
-                // });
+                $(infoPanelBottom).slideToggle(600, function() {
+                    // change content.... and show
+                    $(infoPanelBottom).slideToggle(600);
+                });
             } else {
                 // change content and show....
                 changeInfoContent(index);
                 $(infoPanelTop).slideToggle(1200);
-                // $(infoPanelBottom).slideToggle(1200);
+                $(infoPanelBottom).slideToggle(1200);
             }
             isSinglePlanetSelected = true;
         }
@@ -67,7 +67,7 @@ let aboutPlanetsPanelAll = document.getElementById('about-panel').children;
 //         // threeD.showAboutPlanets(parseInt($('#planets-dropdown').dropdown("get value")));
 //         let aboutIndex = parseInt($('#planets-dropdown').dropdown("get value")) + 1;
 
-//         for (let i = 0; i < aboutPlanetsPanelAll.length; i++) {
+//         for (let i = 0; i < aboutPlanetsPanelAll.le  ngth; i++) {
 //             if (i == aboutIndex) {
 //                 $(aboutPlanetsPanelAll.item(i)).css("display", "block");
 
@@ -122,11 +122,11 @@ btnSizeComparism.addEventListener("click", function(evt) {
     if (isSolarSystemShowing && isSinglePlanetSelected) {
 
         $(infoPanelTop).slideToggle(600);
-        // $(infoPanelBottom).slideToggle(600);
+        $(infoPanelBottom).slideToggle(600);
 
     } else if (isSinglePlanetSelected) {
         $(infoPanelTop).slideToggle(600);
-        // $(infoPanelBottom).slideToggle(600);
+        $(infoPanelBottom).slideToggle(600);
     }
 
     threeD.handleBtnChangeCompClick();
