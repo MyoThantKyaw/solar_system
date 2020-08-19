@@ -1,0 +1,246 @@
+@font-face {
+    font-family: "Pyidaungsu";
+    src: url("Pyidaungsu-2.5.3_Regular.ttf");
+}
+
+body,
+h3,
+h4,
+p,
+label,
+.header,
+.ui.button {
+    font-family: "Pyidaungsu" !important;
+    src: url("Pyidaungsu-2.5.3_Regular.ttf");
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+}
+
+#dom-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(184, 135, 11, 0.291); */
+    background: transparent;
+    pointer-events: none;
+}
+
+#toolbar-top {
+    display: flex;
+    z-index: 20;
+    padding: 5px;
+    padding-right: 4px;
+    height: 40px;
+    /* background: red; */
+    flex-direction: row;
+    justify-content: flex-end;
+    pointer-events: all;
+    align-items: center;
+}
+
+#toolbar-right {
+    position: absolute;
+    right: 3px;
+    /* background: #ca3a65; */
+    top: 40px;
+    display: flex;
+    flex-direction: row;
+    pointer-events: all;
+    z-index: 20;
+}
+
+#toolbar-right>button {
+    margin-bottom: 7px;
+}
+
+#planets-dropdown {
+    margin-right: 8px;
+}
+
+div.menu {
+    background: #252731c3 !important;
+}
+
+div.text {
+    color: #ededed !important;
+}
+
+div.menu>div.item {
+    color: #ededed !important;
+    ;
+}
+
+i.dropdown.icon {
+    color: #ededed
+}
+
+#btn-play-pause {}
+
+.scifiUI {
+    outline: none;
+}
+
+.scifiUI {
+    box-shadow: 0 0 8px #95657d inset, 0 0 8px #95657d;
+    border: 1px solid #95657ded;
+    color: #95657d;
+    /* background: #0000007a; */
+}
+
+#about-panel {
+    padding: 8px;
+    /* width: 400px; */
+    /* text-align: center; */
+    border-radius: 3px;
+    overflow-y: auto;
+    /* flex-grow: 3; */
+}
+
+@media only screen and (max-width: 600px) {
+    #about-panel {
+        padding-right: 0px;
+    }
+}
+
+#about-panel p {
+    text-indent: 50px;
+}
+
+#about-panel h3 {
+    margin: 4px;
+    text-align: center;
+}
+
+
+/* Hide all about panels for each planets */
+
+#about-panel>div {
+    display: none;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.9rem !important;
+    text-align: justify;
+}
+
+.label-planet {
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 2px;
+    background: rgba( 0, 0, 0, .6);
+}
+
+#text-panel {
+    position: absolute;
+    height: 100%;
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 20;
+    background: #000000d3;
+    /* width: 100%; */
+    visibility: hidden;
+    /* display: none; */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    /* flex-grow: 3; */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#btn-close-text-panel {
+    position: absolute;
+    display: inline;
+    right: 10px;
+    top: 10px;
+    color: #ca3a65;
+}
+
+#info-panel {
+    z-index: 10;
+    position: absolute;
+    padding-top: 40px;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#info-panel-top {
+    color: red;
+    /* margin: 40px 5px;
+    margin-bottom: 0px; */
+    padding-bottom: 0px;
+    margin: 20px 5px;
+    display: none;
+    /* width: 200px; */
+    /* margin-left: 40px; */
+    pointer-events: all;
+    /* background: #71ca3a63; */
+    /* border: 1px solid blanchedalmond; */
+}
+
+#info-panel-bottom {
+    pointer-events: all;
+    /* border: 1px solid #95657d; */
+    border-radius: 4px;
+    /* width: 100%; */
+    margin: 10px 10px;
+    padding: 6px;
+    height: 120px;
+    display: none;
+    color: #c8c5dd;
+    overflow: auto;
+}
+
+#info-panel-top>div>table>tbody>tr>td:nth-child(even) {
+    width: 20%;
+    text-align: center;
+}
+
+#info-panel-top>div>table>tbody>tr>td:nth-child(odd) {
+    width: 30%;
+    text-align: center;
+}
+
+#info-panel-top>div {
+    display: none;
+}
+
+#info-panel-top>div>table {
+    color: #4970d3;
+    width: 100%;
+}
+
+#info-panel-top>div>table>tbody>tr>td {
+    padding-top: 2px;
+    /* background: chartreuse; */
+}
+
+#info-panel-top>div>table>tbody>tr>td:nth-child(2) {
+    padding-right: 5px;
+}
+
+#info-panel-top>div>table>tbody>tr>td:nth-child(even) {
+    color: #d3d326;
+}
+
+#view-3d {
+    transition: opacity .4s ease;
+}
+
+#btnSizeComparism {
+    width: 160px;
+    padding: 9px;
+}

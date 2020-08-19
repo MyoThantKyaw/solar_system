@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/semantic-ui/dropdown.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/semantic-ui/modal.min.css"> -->
+
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="scripts/semantic-ui/semantic.min.js"></script>
+    <script src="scripts/semantic-ui/dropdown.min.js"></script>
+    <!-- <script src="scripts/semantic-ui/modal.min.js"></script> -->
+    <script>
+        $(function() {
+            $("#about-panel").load("pages/about_planets.html");
+            $("#info-panel-top").load("pages/info_planets.html");
+            $("#info-panel-bottom").load("pages/info_planets_bottom.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="ui dimmer">
+        <div class="ui text loader">ခေတ္တစောင့်ပါ....</div>
+        <script>
+            $('.dimmer').dimmer({
+                closable: false
+            }).dimmer('show');
+        </script>
+    </div>
+
+    <div id="dom-panel">
+        <div id="toolbar-top">
+            <div id="planets-dropdown" class="ui  inline dropdown">
+                <div class="text">နေအဖွဲ့အစည်း</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item active" data-value="-1">နေအဖွဲ့အစည်း</div>
+                    <div class="item" data-value="0">မာကျူရီ</div>
+                    <div class="item" data-value="1">ဗီးနပ်စ်</div>
+                    <div class="item" data-value="2">ကမ္ဘာ</div>
+                    <div class="item" data-value="3">မားစ်</div>
+                    <div class="item" data-value="4">ဂျူပီတာ</div>
+                    <div class="item" data-value="5">စေတန်</div>
+                    <div class="item" data-value="6">ယူရေးနပ်</div>
+                    <div class="item" data-value="7">နက်ပကျွန်း</div>
+                    <div class="item" data-value="8">နေ</div>
+                </div>
+            </div>
+
+            <!-- <button id="btnDesc" class=" tiny ui icon primary basic button">
+                <i class="newspaper outline icon" size='large'></i>
+            </button> -->
+
+            <button id="btnSizeComparism" class=" tiny ui  primary basic button">
+                အရွယ်အစားနှိုင်းယှဉ်ခြင်းသို့
+            </button>
+
+            <button id="btnInfo" class=" tiny ui icon primary basic button">
+                <i class="info icon" size='large'></i>
+            </button>
+
+        </div>
+
+        <div id="toolbar-right">
+            <button id="btn-play-pause" class=" tiny ui icon primary basic button">
+                <i id="btnPlayPauseIcon" class="pause icon" size='large'></i>
+            </button>
+
+            <button id="btnResetView" class=" tiny ui icon primary basic button">
+                <i class="crosshairs icon" size='large'></i>
+            </button>
+        </div>
+
+        <div id="text-panel">
+            <button id="btn-close-text-panel" class=" small ui icon circular secondary button">
+                <i class=" close icon" size='massive'></i>
+            </button>
+
+            <div id="about-panel" class="scifiUI">
+            </div>
+        </div>
+
+        <div id="info-panel">
+            <div id="info-panel-top">
+            </div>
+
+            <div style="flex-grow: 4;"></div>
+
+            <div id="info-panel-bottom">
+            </div>
+        </div>
+    </div>
+
+    <div class="ui basic modal">
+        <i class="close icon"></i>
+
+        <div class="header">နေအဖွဲ့အစည်း</div>
+        <div class="content">
+            <p class="paragraph">အခြေခံ ကျောင်းသား/သူ များအတွက် သင်ထောက်ကူအဖြစ် ရည်ရွယ်ပါသည်။
+            </p>
+
+            <p>Developed by <i>V2</i> Group</p>
+        </div>
+    </div>
+
+
+    <div id="view-3d">
+    </div>
+
+    <script src="scripts/app_bundle_3d.js"></script>
+    <script src="scripts/ui.js"></script>
+</body>
+
+</html>
